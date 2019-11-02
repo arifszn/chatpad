@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{roomId}', 'Controller@index')->name('index');
+Route::post('/send-message', 'Controller@sendMessage')->name('sendMessage');
